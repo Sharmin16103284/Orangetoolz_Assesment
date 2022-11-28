@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+/* svg {
+  fill: #7D7D7E;
+}
+svg:hover{
+  fill: orange;
+} */
+
 .sidebar{
   position: fixed;
   top: 0;
@@ -95,7 +103,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #1d1b31;
+  color: #fff
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -124,19 +132,37 @@
   min-width: 70px;
   text-align: center;
   line-height: 50px;
-  color: #fff;
+  fill: #7D7D7E;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+
+.sidebar .nav-links li svg:hover{
+  fill: red;
+}
+.sidebar .nav-links li a:hover{
+  border-right: 3px solid red;
+  
+  color: #fff;
+}
+
+.link_name:hover{
+  color: rgb(189, 11, 11);
 }
 
 .sidebar .nav-links li svg.arrow{
   height: 10px;
   min-width: 30px;
   margin-right: 5%;
+  fill: none;
+  stroke: #7D7D7E;
 }
+
+
 .sidebar .nav-links li.showMenu svg.arrow{
   transform: rotate(-180deg);
+  stroke: red;  
 }
 .sidebar.close .nav-links svg.arrow{
   display: none;
@@ -271,6 +297,7 @@
   font-size: 12px;
 }
 .home-section{
+  display: flex;
   position: relative;
   background: #E4E9F7;
   height: 100vh;
@@ -283,9 +310,12 @@
   width: calc(100% - 78px);
 }
 .home-section .home-content{
-  height: 60px;
+  height: 70px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
+  background-color: rgb(75, 182, 253);
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
@@ -296,10 +326,7 @@
   margin: 0 15px;
   cursor: pointer;
 }
-.home-section .home-content .text{
-  font-size: 26px;
-  font-weight: 600;
-}
+
 @media (max-width: 400px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;
@@ -319,4 +346,56 @@
     width: 100%;
     left: 0;
   }
+}
+
+
+
+/* profile */
+.rightContent{
+  /* width: 50%; ---- */
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-left: auto;
+  padding-right: 5%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balance{
+  padding: 0 40px;
+  
+}
+
+.profile{
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePhoto svg{
+  height: 40px;
+  width: 40px;
+}
+
+.profile h1{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#profileArrow{
+  height: 10px;
+  min-width: 30px;
+  margin-right: 5%;
+  fill: none;
+  stroke: #7D7D7E;
 }
