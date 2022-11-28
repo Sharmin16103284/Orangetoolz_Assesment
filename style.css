@@ -138,17 +138,17 @@ svg:hover{
   transition: all 0.5s ease;
 }
 
-.sidebar .nav-links li svg:hover{
-  fill: red;
+.sidebar .nav-links li a:hover svg{
+  fill: #FF5E5E;
 }
 .sidebar .nav-links li a:hover{
-  border-right: 3px solid red;
+  border-right: 3px solid #FF5E5E;
   
   color: #fff;
 }
 
 .link_name:hover{
-  color: rgb(189, 11, 11);
+  color: #FF5E5E;
 }
 
 .sidebar .nav-links li svg.arrow{
@@ -162,7 +162,7 @@ svg:hover{
 
 .sidebar .nav-links li.showMenu svg.arrow{
   transform: rotate(-180deg);
-  stroke: red;  
+  stroke: #FF5E5E;  
 }
 .sidebar.close .nav-links svg.arrow{
   display: none;
@@ -315,8 +315,15 @@ svg:hover{
   flex-direction: row;
   align-items: center;
   width: 100%;
+  /* background-color: rgb(75, 182, 253); */
+}
+
+.home-section .navbar{
+
   background-color: rgb(75, 182, 253);
 }
+
+
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
   color: #11101d;
@@ -353,6 +360,7 @@ svg:hover{
 /* profile */
 .rightContent{
   /* width: 50%; ---- */
+  position: relative;
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -361,6 +369,7 @@ svg:hover{
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .balance{
@@ -369,6 +378,7 @@ svg:hover{
 }
 
 .profile{
+  /* position: absolute; */
   width: 200px;
   height: 50px;
   background-color: #fff;
@@ -378,7 +388,18 @@ svg:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  /* z-index: 1; */
 }
+/* 
+.profilePhoto{
+  width: 200px;
+  height: 50px;
+  background-color: rgb(184, 49, 49);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 45px;
+} */
 
 .profilePhoto svg{
   height: 40px;
@@ -398,4 +419,178 @@ svg:hover{
   margin-right: 5%;
   fill: none;
   stroke: #7D7D7E;
+}
+
+
+
+/* dropdown pofile */
+/* Dropdown Button */
+/* .dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+} */
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #fff;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  box-sizing: border-box;
+  top: 10px;
+  right:-20px;
+  float: right;
+  padding-top: 50px;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #7D7D7E;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 16px;
+  line-height: 30px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.logoutbtn{
+  width: 160px;
+  height: 48px;
+  left: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  /* margin-top: 50px; */
+  padding-top: 8px; 
+  background: rgba(255, 1, 1, 0.1);
+  border-radius: 5px;
+}
+
+.logoutbtn svg{
+  Width: 18px;
+  Height: 20px;
+  padding-top: 5px; 
+  transition: transform 1s ease-in-out;
+}
+
+.logoutbtn:hover svg{
+  transform: rotate(360deg);
+}
+
+/* .logoutbtn:hover svg{
+  transform: rotate(360deg);
+  display: inline-block;
+} */
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+/* banner */
+.banner{
+  display: flex;
+  height: 500vh;
+  padding: 5% ;
+  
+  /* margin:0 5%; */
+}
+
+.bannerLeft{
+  width: 30%;  
+  background-color: rgba(45, 37, 160, 1);
+  /* margin: 5%; */
+  /* margin-left: 2%; */
+  
+}
+
+.bannerRight{
+  width: 70%;
+  /* margin-top: 100px; */
+  margin-right: 5%;
+  background-color: rgb(160, 141, 37); justify-content: space-between;
+}
+
+
+
+
+/* Column container */
+.row {  
+  margin-top: -750px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: white;
+  padding: 20px;
+  margin-right: 1%;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  margin-left: 1%;
+  /* display: flex; 
+  flex-direction: row; */
+}
+
+.rightItems{
+  flex: 60%;
+  background-color: white;
+  /* padding: 20px; */
+  margin-left: 1%;
+  display: flex; 
+  flex-direction: row;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 30%;
+  padding: 20px;
+  margin: 2%;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+    margin-top: 500px;
+  }
 }
