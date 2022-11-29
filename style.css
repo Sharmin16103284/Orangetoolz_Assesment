@@ -847,12 +847,13 @@ input {
 
 
 /* Responsive layout */
+
+
 @media screen and (max-width: 700px) {
 
-  .homeSection {
-    overflow-x: hidden;
+  .body {
+    overflow: hidden;
   }
-
 
   .row {
     /*margin-top: 5px;*/
@@ -864,14 +865,11 @@ input {
     width: 100%;
   }
 
-
   .side {
     flex-direction: column;
-    /*margin-top: 600px;*/
     margin-bottom: 30px;
     width: 100%;
   }
-
 
   .main {
     width: 100%;
@@ -888,14 +886,33 @@ input {
   }
 
   .balance {
-    /*margin-top: 100px;*/
-    /*width: 100%; */
     display: none;
   }
 
-
   .credit svg {
     margin: 3%;
+  }
+
+
+  /* updateProfile */
+
+  .optionDetails{
+    height: 140vh;
+  }
+
+  .optionItems{
+    width: 100%;
+    display: inline-block;
+  }
+
+  .toggleItem{
+    width: 100%;
+    padding: 5%;
+  }
+
+  .emailSection{
+    width: 100%;
+    display: inline-block;
   }
 
 }
